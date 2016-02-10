@@ -238,6 +238,7 @@ class StopTime(Base):
     pickup_type = Column(Integer)
     drop_off_type = Column(Integer)
     shape_dist_traveled = Column(Integer, nullable=True)
+    timepoint = Column(Integer)
 
     __table_args__ = create_foreign_keys('trips.trip_id', 'stops.stop_id')
 
